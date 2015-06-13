@@ -1,0 +1,14 @@
+table.table.table-striped
+  thead
+    tr
+      th Invoice Id
+      th Invoice Number
+      th Invoice Date
+      th Reporter
+  tbody
+    - company.operations.each do |operation|
+      tr
+        td= "##{operation.id} "
+        td= operation.invoice_num
+        td= operation.invoice_date
+        td= operation.reporter

@@ -3,8 +3,8 @@
 
 companies = ['Monterail, Inc.', 'Ostrzy Entertainment', 'ACME', 'Company X', 'Big Company 1',
              'TT Internet', 'SB Komputery', 'BP Biznes', 'KT Koty', 'MS Szpadel', 'Microsoft',
-             'Hugehard', 'Comcast']
+             'Hugehard', 'Comcast', 'Wesoła Gżegżółka']
 
 companies.each do |company|
-  Company.create(name: company)
+  Company.find_or_create_by(name: company)
 end

@@ -1,0 +1,13 @@
+table.table.table-striped
+  thead
+    tr
+      th Operation Count
+      th Avg. Amout of Ops
+      th Highest Operatn this month
+      th Accepted operations
+  tbody
+    tr
+      td= company.operation_count
+      td= number_to_currency(company.average_amount_operations, precision: 2)
+      td= company.highest_operation_this_month
+      td= company.accepted_operations_count
