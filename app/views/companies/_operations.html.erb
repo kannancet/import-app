@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Invoice Id</th>
+      <th>Invoice Number</th>
+      <th>Invoice Date</th>
+      <th>Reporter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% company.operations.each do |operation| %>
+      <tr>
+        <td><%= "##{operation.id}" %></td>
+        <td><%= operation.invoice_num %></td>
+        <td><%= operation.invoice_date %></td>
+        <td><%= operation.reporter %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

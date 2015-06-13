@@ -1,0 +1,15 @@
+<%- model_class = Company -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<div id="companies_list">
+  <div class="row"> 
+    <p>Loading Companies.... <%= image_tag "loader.gif" %></p>
+  </div>
+</div>
+
+<%= hidden_field_tag "current_page", params[:page] || 1 %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_company_path,
+            :class => 'btn btn-primary' %>

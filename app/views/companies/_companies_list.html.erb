@@ -1,0 +1,18 @@
+<table class="table table-striped" style="border: 1;">
+  <thead>
+    <tr>
+      <th>Company Id</th>
+      <th>Company Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <% @companies.each do |company| %>
+  	<%= render "company_row_single", company: company %>
+  	<tr id="company_info<%= company.id %>"></tr>
+  <% end %>
+
+  </tbody>
+</table>
+<%= paginate @companies %>

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Operation Count</th>
+      <th>Avg. Amout of Ops</th>
+      <th>Highest Operatn this month</th>
+      <th>Accepted operations</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= company.operation_count %></td>
+        <td><%= number_to_currency(company.average_amount_operations, precision: 2) %></td>
+        <td><%= company.highest_operation_this_month %></td>
+        <td><%= company.accepted_operations_count %></td>
+      </tr>
+  </tbody>
+</table>
